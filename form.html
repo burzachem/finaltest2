@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1"> 
+  <meta charset="UTF-8">
+  <title>CodePen - Responsive CSS Grid</title>
+  <link rel="stylesheet" href="./style.css">
+<style>
+    
+  /////////////////////////////////
+    
+    
+    
+    :root {
+  --main-radius: 5px;
+  --main-padding: 0px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1.0fr 1.5fr 1.5fr 0.8fr;
+  grid-template-areas:
+    "nav nav nav nav"
+    "main main sidebar sidebar"
+    "content1 content1 sidebar sidebar"
+    "footer footer sidebar sidebar"
+    "content3 content3 content2 content2";
+  grid-gap: 0.5rem;
+ 
+  color: #004d40;
+
+}
+
+nav {
+     justify-self: center;
+background: white;
+  grid-area: nav;
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+}
+
+main {
+background: white;
+  grid-area: main;
+ padding-top: 0;
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+  text-align: center;
+}
+
+#content11 {
+    margin-left: 50px;
+background: white;
+   padding-top: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  grid-area: sidebar;
+  border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+#content1 {
+   padding-top: 0; 
+background: white;
+  grid-area: content1;
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+}
+
+#content2 {
+background: white;
+  z-index: 1;
+
+  grid-area: content2;
+  border-radius: var(--main-radius);
+   padding: var(--main-padding);
+}
+
+#content3 {
+background: white;
+  grid-area: content3;
+ 
+  border-radius: var(--main-radius);
+   padding: var(--main-padding);
+}
+
+footer {
+background: white;
+  grid-area: footer;
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+}
+
+a {
+  text-align: center;
+  display: block;
+  font-family: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+      "nav"
+      "main"
+      "content1"
+      "sidebar"
+      "content3"
+      "footer"
+      "content2";
+  }
+    
+  
+  iframe{
+  width: 100%;
+
+
+}  
+      
+
+     
+    
+    #content1 {
+    
+background: white;
+  grid-area: content1;
+  border-radius: var(--main-radius);
+   padding: var(--main-padding);
+}
+    footer {
+background: white;
+  grid-area: footer;
+  border-radius: var(--main-radius);
+   padding: var(--main-padding);
+}
+    .box{
+width: 100%;
+ z-index: 0;
+      
+    }
+    
+   
+
+    .box2{
+width:100%;
+         z-index: 0;
+      
+    }
+        .box3{
+          width: 100%;
+         z-index: 0;
+            background-color: gainsboro;
+            float:right;
+      
+    }
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /////////////////////////////
+    
+      
+    img {
+  width: 95%;
+  height: auto;
+  margin: 10px;
+        
+       
+}
+    
+    
+     .text1{
+          width: 90%;
+         margin-left: 10%;
+    } 
+    
+    
+    
+    
+iframe{
+  width: 80%;
+    float: right;
+
+}
+    
+   .photo {
+  width: 88%;
+       float: right;
+}
+    
+
+       
+        ul.a {
+  list-style-type: circle;
+}
+        
+
+ul.a {
+margin: 12px;
+padding: 0;
+}
+ul.a li{
+margin: 0 0 12px 0;
+font-size: .9em;
+line-height: 1em;
+}
+
+body:nth-of-type(1) ul.a li{
+list-style-type:none;
+padding: 0 0 0 45px;
+position:relative;
+}
+
+body:nth-of-type(1) ul.a li:before{
+/*fill it with a blank space*/
+content:"\00a0";
+
+/*make it a block element*/
+display: block;
+
+/*adding an 8px round border to a 0x0 element creates an 8px circle*/
+border: solid 9px #272727;
+border-radius: 9px;
+-moz-border-radius: 9px;
+-webkit-border-radius: 9px;
+height: 0;
+width: 0;
+
+/*Now position it on the left of the list item, and center it vertically
+(so that it will work with multiple line list-items)*/
+position: absolute;
+left: 7px;
+top: 40%;
+margin-top: -8px;
+}
+
+body:nth-of-type(1) ul.a li:after{
+/*Add another block-level blank space*/
+content:"\00a0";
+display:block;
+
+/*Make it a small rectangle so the border will create an L-shape*/
+width: 3px;
+height: 6px;
+
+/*Add a white border on the bottom and left, creating that 'L' */
+border: solid #eeeeee;
+border-width: 0 2px 2px 0;
+
+/*Position it on top of the circle*/
+position:absolute;
+left: 14px;
+top: 40%;
+margin-top: -4px;
+
+/*Rotate the L 45 degrees to turn it into a checkmark*/
+-webkit-transform: rotate(45deg);
+-moz-transform: rotate(45deg);
+-o-transform: rotate(45deg);
+}      
+
+ body {
+font-family: Helvetica, Arial, sans-serif;
+  color: #333333;
+}
+    h3{
+          text-align: center;
+    }  
+     h1{
+          text-align: center;
+    }  
+    
+    
+     .content11{
+    
+        background-color: gainsboro;
+        width: 350px;
+         z-index: ;
+    }
+    
+   .box {
+    
+        background-color: gainsboro;
+        max-width:350px;
+         z-index: ;
+    }
+    .box2{
+    height: 350px;
+        width: 100%;
+         z-index: 0;
+      
+    }
+        .box3{
+          width: 350px;
+         z-index: 0;
+            background-color: gainsboro;
+            float:right;
+      
+    }
+    
+    
+.container22{
+      
+    top: 0;
+    background-color: red;
+    width: 100%;
+    height: 100px;
+    }
+
+
+</style>
+    
+     
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    
+    
+    
+    
+    
+</head>
+<body>
+    
+    
+    
+    
+   
+
+    
+
+    
+    
+    
+    
+    <script type="text/javascript">
+	function importHotmart(){ 
+ 		var imported = document.createElement('script'); 
+ 		imported.src = 'https://static.hotmart.com/checkout/widget.min.js'; 
+ 		document.head.appendChild(imported); 
+		var link = document.createElement('link'); 
+		link.rel = 'stylesheet'; 
+		link.type = 'text/css'; 
+		link.href = 'https://static.hotmart.com/css/hotmart-fb.min.css'; 
+		document.head.appendChild(link);	} 
+ 	importHotmart(); 
+ </script> 
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<!-- partial:index.partial.html -->
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,800,900&display=swap" rel="stylesheet">
+  <!-- Code by Angela Delise
+https://codepen.io/angeladelise/pen/YzXLdyq
+  Video Tutorial: https://www.youtube.com/watch?v=68O6eOGAGqA -->
+
+</head>
+
+<div class="container">
+    
+    
+    
+<nav >
+    <div class="nav">
+    
+    <img src="https://www.digo.com.co/wp-content/uploads/2020/09/imagen-vende-turismo-por-internet-landing-800x320.jpg"  >
+        
+        </div>
+        </nav>
+  <main>
+      <div class="text1">
+    <h2>AUMENTA LAS VENTAS DE TU AGENCIA DE VIAJES HACIENDO MARKETING DIGITAL</h2> 
+    
+    <div id="" class="title">
+    
+   <h5>Descubre cómo VENDER turismo por Internet creando estrategias de Marketing Digital por Google, Facebook, Instagram y WhatsApp, deja de vender a lo dinosaurio y AUMENTA LAS VENTAS de tu agencia de viajes en el 2020.</h5></div>
+          
+          
+          
+      
+      </div>
+    
+    
+    </main>
+    
+    
+  <div id="content11">
+      
+     <div class="box">  
+        
+       
+       <h1>CON ESTE CURSO CONSEGUIRÁS </h1>
+<ul class="a">
+<li>
+    Aumentar las ventas de tu agencia en los próximos 30 días.</li>
+    <li>
+Dejar de buscar clientes y que ellos te encuentren a ti. </li>
+<li>
+Conseguir Más prospectos calificados todos los días.</li>
+<li>
+Retornos de inversión de más del 500% en tus campañas.</li>
+<li>
+Hacer que Google, Facebook, Instagram y WhatsApp sean tus mejores vendedores 24 horas al día.</li>
+<li>
+Ahorrar tiempo automatizando tus procesos de venta. </li>
+<li>
+Crear, configurar y personalizar tus propias campañas. </li>
+<li>
+Reinventar la forma en que buscas clientes.</li>
+<li>
+y lo más importante, a VENDER, por que Sin Ventas No Hay Paraíso.</li>
+            </ul>
+
+      <img src="https://www.digo.com.co/wp-content/uploads/2020/11/precio2-3999.fw_.png"  > 
+      
+     
+            
+ <ul >
+  <li>LO MAS VENDIDO ⭐⭐⭐⭐⭐</li>
+ <li>50 CUPOS DISPONIBLES</li>
+ <li>1175 Estudiantes.</li>
+ <li>Última actualización: Junio del 2020</li>
+<br>
+Último día para ingresar con el 60% de descuento.
+  <br>
+Ingresa el cupón 058978 para acceder a descuento
+            
+        </ul>
+      
+         
+         
+         
+         <!-- Include the PayPal JavaScript SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=Ab3R-BPrHb_yK4BExaOiv0urHulyMFAeEXSx5eeHS0826-NvPDPTNtl0fAhBTnHXRvD0ioSsRIRCSjUq&currency=MXN"></script>
+         
+         
+         
+         
+         
+         
+         
+         <div id="checkout" class="checkout"> </div>
+   
+         
+
+        
+    <script>paypal.Buttons({
+            // Set up the transaction
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '2500.00'
+                        }
+                    }]
+                });
+            },
+
+            // Finalize the transaction
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    // Show a success message to the buyer
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            }
+
+
+        }).render('#checkout');</script>
+        
+      <!-- 
+ 
+   <a onclick="return false;" href="https://pay.hotmart.com/X45387516H?checkoutMode=2" class="hotmart-fb hotmart__button-checkout">Buy now</a> 
+
+
+<button class="btn">CLIC AQUÍ PARA INSCRIBIRTE HOY CON EL 60% DE DESCUENTO</button>-->
+      
+       
+    
+   </div>
+            </div>
+    
+
+    
+   
+    
+  <div id="content1">    <iframe width="500" height="300" src="https://www.youtube.com/embed/5mcAcBT26ao" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  </div>
+    
+    
+
+    
+    
+    
+    
+  <div id="content3">  
+      
+         <div class="box3">  
+      
+      <div id="" class="list">
+        <h1>CONTENIDO</h1>
+<ul class="a">
+<li>
+
+    Cómo venderle al consumidor de hoy.</li>
+
+<li>Estrategias para vender planes por Google (SUPER EFECTIVO)</li>
+
+<li>Estrategias para vender planes por Facebook e Instagram.</li>
+
+<li>Cómo más ventas por WhatsApp Business.</li>
+
+<li>Cómo hacer que Internet trabaje para ti las 24 horas. </li>
+
+<li>Estructura para tu estrategia de marketing digital</li>
+
+<li>Cómo hacer seguimiento por remarketing en Facebook y YouTube</li>
+
+<li>Cómo hacer anuncios VENDEDORES en Facebook, Instagram y Google</li>
+
+<li>Cómo diseñar paginas web o landing page persuasivas que den ganas de comprar.</li>
+
+<li>Cómo escribir textos persuasivos que lleven al cliente directamente a la compra</li>
+        </ul>
+
+</div>
+             
+      </div>
+</div>
+    
+    
+    
+    
+  <footer>
+   
+<div class='photo'>
+  <img class='photo'  src="https://www.digo.com.co/wp-content/uploads/2020/11/testi-fabian-600x248.png" alt="" />
+ </div>
+    
+    </footer>
+    
+    
+    
+      
+   
+  
+
+
+   
+</div>
+    
+    
+    
+</body>
+</html>
